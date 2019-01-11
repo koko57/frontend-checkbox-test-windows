@@ -14,4 +14,35 @@
     @include align-items(center);
     @include justify-content(center);
   }
+  .hidden-content {
+    height: 100px;
+    @include flexbox();
+    @include align-items(center);
+    @include justify-content(center);
+    background-color: red;
+    color: white;
+  }
+  .input-wrapper {
+    width: 3rem;
+    height: 1.5rem;
+    border: 2px solid turquoise;
+    border-radius: 1rem;
+    padding: 0.1rem;
+    cursor: pointer;
+    @include flexbox();
+    @include align-items(center);
+    @include justify-content(flex-start);
+    &--checked {
+      @include justify-content(flex-end);
+    }
+  }
+  .input-check {
+    height: 1.4rem;
+    width: 1.4rem;
+    background-color: turquoise;
+    border-radius: 50%;
+  }
+  .checkbox__input {
+    visibility: hidden;
+  }
 }
